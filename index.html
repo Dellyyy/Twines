@@ -319,7 +319,7 @@
     .modal-gallery .cert-item img {
       width: 100%;
       height: auto;
-      aspect-ratio: 3 / 4;
+      aspect-ratio: 16 / 9;
       object-fit: cover;
       border-radius: 12px;
       background: #dce6f0;
@@ -637,7 +637,7 @@
       </div>
     </div>
 
-    <!-- Цифровое производство (ПОЛНОСТЬЮ ПЕРЕРАБОТАНО) -->
+    <!-- Цифровое производство -->
     <div style="margin-bottom: 1.8rem;">
       <div class="card" style="background: #f3f8ff; border-left: 5px solid #1f4a7a;" id="digitalProdCard">
         <div class="card-title"><i class="fas fa-industry"></i> Цифровое производство</div>
@@ -759,17 +759,59 @@
         </div><!-- /expand-content -->
       </div>
     </div>
+
+    <!-- СКУД -->
+    <div style="margin-bottom: 1.8rem;">
+      <div class="card" style="background: #f3f8ff; border-left: 5px solid #1f4a7a;">
+        <div class="card-title"><i class="fas fa-camera"></i> Система распознавания лица по фото и видео (СКУД)</div>
+        <div class="card-meta"><span>OpenCV</span></div>
+        <div class="card-desc">
+          Была разработана программа с библиотекой cv2, которая распознает добавленные в программу лица в реальном времени (видео) либо по загруженному фото. Реализован механизм сравнения дескрипторов лиц для идентификации сотрудников при проходе через КПП.
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/Dellyyy/Resume/tree/main/assets/projects/skud" target="_blank"><i class="fab fa-github"></i> Ссылка на программу на GitHub</a>
+        </div>
+        <div class="card-links" style="justify-content: space-between; align-items: center;">
+          <div></div>
+          <button class="expand-btn skud-expand-toggle"><i class="fas fa-chevron-down"></i> Подробнее</button>
+        </div>
+        <div class="expand-content skud-expand-content">
+          <div class="extra-desc" style="margin-bottom: 1rem;">
+            <p><strong>Принцип работы:</strong> Программа загружает эталонные изображения сотрудников, строит их face-дескрипторы с помощью библиотеки face_recognition. При поступлении кадра с веб-камеры или загрузке фото выполняется поиск лиц и сравнение с базой. При совпадении отображается имя сотрудника и зелёная рамка, при отсутствии совпадений — красная рамка и пометка «Неизвестный».</p>
+          </div>
+          <div class="screenshot-grid" style="grid-template-columns: repeat(2, 1fr);">
+            <div class="screenshot-item" data-src="assets/projects/skud/skud-1.png">
+              <img src="assets/projects/skud/skud-1.png" alt="Скриншот СКУД 1">
+            </div>
+            <div class="screenshot-item" data-src="assets/projects/skud/skud-2.png">
+              <img src="assets/projects/skud/skud-2.png" alt="Скриншот СКУД 2">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <!-- КУРСЫ и САМОРАЗВИТИЕ -->
   <section class="section">
     <div class="section-title"><i class="fas fa-graduation-cap"></i> Курсы и Саморазвитие</div>
     <div class="grid-2col">
-      <div class="card"><div class="card-title"><i class="fas fa-university"></i> Stepik</div><div class="card-desc">Курс Stepik.</div><div class="card-links"><a class="modal-trigger" data-modal="sber"><i class="fas fa-certificate"></i> сертификат</a></div></div>
+      <div class="card">
+        <div class="card-title"><i class="fas fa-university"></i> Stepik</div>
+        <div class="card-desc">Курс Stepik.</div>
+        <div class="card-links"><a class="modal-trigger" data-modal="sber"><i class="fas fa-certificate"></i> сертификат</a></div>
+      </div>
       <div class="card">
         <div class="card-title"><i class="fas fa-draw-polygon"></i> Цифровые решения</div>
         <div class="card-desc">Посещение экскурсии офиса «Цифровые решения».</div>
         <div class="card-links"><a class="modal-trigger" data-modal="screenshots"><i class="fas fa-image"></i> Скриншоты</a></div>
+      </div>
+      <!-- НОВЫЙ БЛОК: Курсы Сбера -->
+      <div class="card">
+        <div class="card-title"><i class="fas fa-robot"></i> Курсы Сбера</div>
+        <div class="card-desc">Курсы от Сбера</div>
+        <div class="card-links"><a class="modal-trigger" data-modal="sber-courses"><i class="fas fa-certificate"></i> Сертификаты</a></div>
       </div>
     </div>
   </section>
@@ -779,6 +821,11 @@
     <div class="section-title"><i class="fas fa-briefcase"></i> Практика</div>
     <div class="grid-2col">
       <div class="card"><div class="card-title"><i class="fas fa-folder"></i> Документы практики</div><div class="card-desc">Шаблоны и готовые документы на Google Диске.</div><div class="card-links"><a href="https://drive.google.com/drive/folders/18GVqueO_gAUAq7pjUMBJr7RB5RiZmlK2?usp=sharing" target="_blank"><i class="fab fa-google-drive"></i>Шаблоны и Готовые документы</a></div></div>
+      <div class="card">
+        <div class="card-title"><i class="fas fa-robot"></i> ИИ на месте практики</div>
+        <div class="card-desc">Сайт-помощник для решения проблем с тех.оборудованием и создание заявок</div>
+        <div class="card-links"><a href="https://6a4098f8659bb4b4bd7d2155--ornate-piroshki-81ba86.netlify.app/" target="_blank"><i class="fas fa-link"></i> Ссылка на сайт</a></div>
+      </div>
     </div>
   </section>
 
@@ -788,8 +835,8 @@
     <div class="grid-2col">
       <div class="card">
         <div class="card-title"><i class="fas fa-file-alt"></i> Конспекты</div>
-        <div class="card-desc">• API <br> • Математическое моделирование <br> • Backend Python🐍 <br> • Компьютерное зрение </div>
-        <div class="card-links"><a href="https://drive.google.com/drive/folders/1ePfjH_asO4hQJNwDLoVgo6TWFtSq3RLt?usp=sharing" target="_blank"><i class="fab fa-google-drive"></i> Google-документы</a></div>
+        <div class="card-desc">• API <br> • Математическое моделирование <br> • Backend Python🐍 <br> • Компьютерное зрение  <br> • Тестирование </div>
+        <div class="card-links"><a href="https://drive.google.com/drive/folders/1llZYV0Y2jq4FNNQZ6DJZRk43xgo8SOYN?usp=sharing" target="_blank"><i class="fab fa-google-drive"></i> Google-документы</a></div>
       </div>
       <div class="card">
         <div class="card-title"><i class="fas fa-calculator"></i> Численные методы</div>
@@ -805,99 +852,51 @@
   </div>
 </div>
 
-<!-- Модальные окна с вертикальной галереей -->
+<!-- Модальное окно ИТ-Планета -->
 <div class="modal-overlay" id="modal-itplanet">
   <div class="modal-content">
     <h2><i class="fas fa-certificate"></i> Сертификаты · ИТ-Планета</h2>
     <div class="modal-gallery">
-      
-      <!-- Карточка 1 -->
       <div class="cert-item" data-src="assets/olympiads/it-planet/certificate_1.jpg">
         <img src="assets/olympiads/it-planet/it-planet-cert-1.jpg" alt="Сертификат Мастерство промптов (текст)">
         <div class="cert-title">Участие в первом отборочном этапе</div>
       </div>
-      
-      <!-- Карточка 2 -->
       <div class="cert-item" data-src="assets/olympiads/it-planet/certificate_2.jpg">
         <img src="assets/olympiads/it-planet/it-planet-cert-2.jpg" alt="Сертификат Прикладное программирование if...else">
         <div class="cert-title">Успешное завершение первого отборочного этапа</div>
       </div>
-      
-      <!-- Карточка 3 -->
       <div class="cert-item" data-src="assets/olympiads/it-planet/certificate_3.jpg">
         <img src="assets/olympiads/it-planet/it-planet-cert-3.jpg" alt="Сертификат Мастерство промптов (изображения)">
         <div class="cert-title">Участие во втором отборочном этапе</div>
       </div>
-      
-      <!-- Карточка 4 (дополнительная номинация) -->
       <div class="cert-item" data-src="assets/olympiads/it-planet/certificate_4.jpg">
         <img src="assets/olympiads/it-planet/it-planet-cert-4.jpg" alt="Сертификат дополнительной номинации">
         <div class="cert-title">Успешное завершение второго отборочного этапа</div>
       </div>
-     
       <div class="cert-item" data-src="assets/olympiads/it-planet/certificate_4.jpg">
         <img src="assets/olympiads/it-planet/it-planet-cert-5.jpg" alt="Сертификат дополнительной номинации">
         <div class="cert-title">Участие в финале</div>
       </div>
-      
     </div>
     <button class="modal-close-btn" data-close="modal-itplanet">Закрыть</button>
   </div>
 </div>
 
-<div class="modal-overlay" id="modal-vk">
-  <div class="modal-content">
-    <h2><i class="fas fa-certificate"></i> Сертификаты · VK Education</h2>
-    <div class="modal-gallery">
-      <div class="cert-item" data-src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='533' viewBox='0 0 400 533'%3E%3Crect width='400' height='533' fill='%23e6f0fa'/%3E%3Ctext x='40' y='250' font-family='Inter' font-size='22' fill='%231f4a7a'%3EVK Education%3C/text%3E%3C/svg%3E">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='533' viewBox='0 0 400 533'%3E%3Crect width='400' height='533' fill='%23e6f0fa'/%3E%3Ctext x='40' y='250' font-family='Inter' font-size='22' fill='%231f4a7a'%3EVK Education%3C/text%3E%3C/svg%3E" alt="VK сертификат">
-        <div class="cert-title">📘 Курс по Python</div>
-      </div>
-    </div>
-    <button class="modal-close-btn" data-close="modal-vk">Закрыть</button>
-  </div>
-</div>
-
-<div class="modal-overlay" id="modal-yandex">
-  <div class="modal-content">
-    <h2><i class="fas fa-certificate"></i> Сертификаты · Яндекс Лицей</h2>
-    <div class="modal-gallery">
-      <div class="cert-item" data-src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='533' viewBox='0 0 400 533'%3E%3Crect width='400' height='533' fill='%23f0f5fc'/%3E%3Ctext x='40' y='250' font-family='Inter' font-size='22' fill='%231f4a7a'%3EЯндекс Лицей%3C/text%3E%3C/svg%3E">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='533' viewBox='0 0 400 533'%3E%3Crect width='400' height='533' fill='%23f0f5fc'/%3E%3Ctext x='40' y='250' font-family='Inter' font-size='22' fill='%231f4a7a'%3EЯндекс Лицей%3C/text%3E%3C/svg%3E" alt="Яндекс сертификат">
-        <div class="cert-title">📚 Основы программирования</div>
-      </div>
-    </div>
-    <button class="modal-close-btn" data-close="modal-yandex">Закрыть</button>
-  </div>
-</div>
-
+<!-- Модальное окно Stepik (Сбер) -->
 <div class="modal-overlay" id="modal-sber">
   <div class="modal-content">
     <h2><i class="fas fa-certificate"></i> Сертификаты · Stepik</h2>
     <div class="modal-gallery">
-      <div class="cert-item" data-src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='533' viewBox='0 0 400 533'%3E%3Crect width='400' height='533' fill='%23e0ebf7'/%3E%3Ctext x='40' y='250' font-family='Inter' font-size='22' fill='%231f4a7a'%3EСбербанк%3C/text%3E%3C/svg%3E">
-        <img src="assets/certificates/stepik-1.jpg" alt="Сбер сертификат">
-        <div class="cert-title">Основы Css и HTML</div>
+      <div class="cert-item" data-src="assets/certificates/stepik-1.jpg">
+        <img src="assets/certificates/stepik-1.jpg" alt="Сертификат Stepik">
+        <div class="cert-title">Основы CSS и HTML</div>
       </div>
     </div>
     <button class="modal-close-btn" data-close="modal-sber">Закрыть</button>
   </div>
 </div>
 
-<div class="modal-overlay" id="modal-cloud">
-  <div class="modal-content">
-    <h2><i class="fas fa-certificate"></i> Сертификаты · Yandex Cloud</h2>
-    <div class="modal-gallery">
-      <div class="cert-item" data-src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='533' viewBox='0 0 400 533'%3E%3Crect width='400' height='533' fill='%23eef3fa'/%3E%3Ctext x='40' y='250' font-family='Inter' font-size='22' fill='%231f4a7a'%3EYandex Cloud%3C/text%3E%3C/svg%3E">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='533' viewBox='0 0 400 533'%3E%3Crect width='400' height='533' fill='%23eef3fa'/%3E%3Ctext x='40' y='250' font-family='Inter' font-size='22' fill='%231f4a7a'%3EYandex Cloud%3C/text%3E%3C/svg%3E" alt="Cloud сертификат">
-        <div class="cert-title">☁️ Облачные технологии</div>
-      </div>
-    </div>
-    <button class="modal-close-btn" data-close="modal-cloud">Закрыть</button>
-  </div>
-</div>
-
-<!-- Модальное окно для скриншотов "Цифровые решения" -->
+<!-- Модальное окно Цифровые решения -->
 <div class="modal-overlay" id="modal-screenshots">
   <div class="modal-content">
     <h2><i class="fas fa-image"></i> Скриншоты · Цифровые решения</h2>
@@ -919,6 +918,24 @@
       </div>
     </div>
     <button class="modal-close-btn" data-close="modal-screenshots">Закрыть</button>
+  </div>
+</div>
+
+<!-- НОВОЕ МОДАЛЬНОЕ ОКНО: Курсы Сбера -->
+<div class="modal-overlay" id="modal-sber-courses">
+  <div class="modal-content">
+    <h2><i class="fas fa-certificate"></i> Сертификаты · Курсы Сбера</h2>
+    <div class="modal-gallery">
+      <div class="cert-item" data-src="assets/certificates/sber-1.png">
+        <img src="assets/certificates/sber-1.png" alt="Генеративное искусство">
+        <div class="cert-title">Генеративное искусство</div>
+      </div>
+      <div class="cert-item" data-src="assets/certificates/sber-2.png">
+        <img src="assets/certificates/sber-2.png" alt="Работа с LLM GigaChat">
+        <div class="cert-title">Работа с LLM GigaChat</div>
+      </div>
+    </div>
+    <button class="modal-close-btn" data-close="modal-sber-courses">Закрыть</button>
   </div>
 </div>
 
@@ -999,7 +1016,7 @@
       });
     });
 
-    // ---------- Раскрытие "Подробнее" ----------
+    // ---------- Раскрытие "Подробнее" для Цифрового производства ----------
     const expandToggle = document.getElementById('expandToggle');
     const expandContent = document.getElementById('expandContent');
     let expanded = false;
@@ -1013,6 +1030,22 @@
           : '<i class="fas fa-chevron-down"></i> Подробнее';
       });
     }
+
+    // ---------- Раскрытие "Подробнее" для СКУД ----------
+    const skudToggles = document.querySelectorAll('.skud-expand-toggle');
+    skudToggles.forEach((toggle, index) => {
+      const content = toggle.closest('.card').querySelector('.skud-expand-content');
+      let isOpen = false;
+      if (toggle && content) {
+        toggle.addEventListener('click', function() {
+          isOpen = !isOpen;
+          content.classList.toggle('open', isOpen);
+          this.innerHTML = isOpen 
+            ? '<i class="fas fa-chevron-up"></i> Скрыть'
+            : '<i class="fas fa-chevron-down"></i> Подробнее';
+        });
+      }
+    });
 
     // ---------- Световая комната для скриншотов ----------
     const lightboxOverlay = document.getElementById('lightboxOverlay');
@@ -1031,7 +1064,7 @@
       document.body.style.overflow = '';
     }
 
-    // Обработчик клика на всех .screenshot-item (в карточке "Цифровое производство")
+    // Обработчик клика на всех .screenshot-item
     document.querySelectorAll('.screenshot-item').forEach(item => {
       item.addEventListener('click', function(e) {
         if (e.target.closest('.screenshot-label')) return;
@@ -1040,11 +1073,22 @@
       });
     });
 
-    // Обработчик клика на .screenshot-modal-item (в модалке "Цифровые решения")
+    // Обработчик клика на .screenshot-modal-item
     document.querySelectorAll('.screenshot-modal-item').forEach(item => {
       item.addEventListener('click', function() {
         const src = this.dataset.src;
         if (src) openLightbox(src);
+      });
+    });
+
+    // Обработчик клика на .cert-item в модальных окнах (для увеличения сертификатов)
+    document.querySelectorAll('.cert-item').forEach(item => {
+      item.addEventListener('click', function() {
+        const img = this.querySelector('img');
+        if (img) {
+          const src = img.src;
+          if (src) openLightbox(src);
+        }
       });
     });
 
